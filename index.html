@@ -542,7 +542,7 @@
           </button>
           <button class="bank-button" type="button" data-bank="santander" aria-pressed="false">
             <span class="logo-set single"><img src="assets/santander-consumer-new.gif" alt="Santander Consumer"></span>
-            <span>3 opciones activas</span>
+            <span>5 opciones activas</span>
           </button>
           <button class="bank-button" type="button" data-bank="tanner" aria-pressed="false">
             <span class="logo-set single"><img src="assets/tanner.jpg" alt="Tanner Crédito Automotriz"></span>
@@ -655,8 +655,24 @@
         logos: [
           { src: "assets/santander-consumer-new.gif", alt: "Santander Consumer" }
         ],
-        window: "Vigente hasta 31 oct 2026",
+        window: "Vigencia y condiciones según promoción",
         options: [
+          {
+            type: "Crédito automotriz · Tesla Model 3",
+            promotion: "Model 3 · Bono de $1.500.000 · Tasa 0,89% mensual",
+            validity: "Pago antes del 15 dic 2026",
+            notes: "Todos los Model 3. Bono de financiamiento: $1.500.000. Precio desde: $28.400.000.<br><br>Condiciones: Crédito + $10.000.000. Pie + $2.000.000 (20%). Solo modelos seleccionados. Solo en inventario (no a pedido). Pagado antes del 15 de diciembre de 2026. Entregado antes de Navidad.",
+            how: "",
+            simulation: { rate: 0.89, months: 36, balloon: 30, amount: 28400000 }
+          },
+          {
+            type: "Crédito automotriz · Tesla Model Y",
+            promotion: "Model Y · Bono de $3.000.000 · Tasa 0,89% mensual",
+            validity: "Pago antes del 15 dic 2026",
+            notes: "Modelos: MY SR RWD y MY LR AWD. Bono de financiamiento: $3.000.000. Precio desde: $33.900.000. Exclusiones: MY LR RWD y MY L.<br><br>Condiciones: Crédito + $10.000.000. Pie + $2.000.000 (20%). Solo modelos seleccionados. Solo en inventario (no a pedido). Pagado antes del 15 de diciembre de 2026. Entregado antes de Navidad.",
+            how: "",
+            simulation: { rate: 0.89, months: 36, balloon: 30, amount: 33900000 }
+          },
           {
             type: "Crédito automotriz",
             promotion: "Tasa 0,99%",
@@ -892,7 +908,7 @@
             <div class="sim-grid">
               <label class="sim-field">
                 <span class="label">Monto vehículo</span>
-                <input class="sim-input" type="text" inputmode="numeric" data-field="amount" value="${formatCurrency(30000000)}">
+                <input class="sim-input" type="text" inputmode="numeric" data-field="amount" value="${formatCurrency(sim.amount ?? 30000000)}">
               </label>
               <label class="sim-field">
                 <span class="label">Meses</span>
