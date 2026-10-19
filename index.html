@@ -542,7 +542,7 @@
           </button>
           <button class="bank-button" type="button" data-bank="santander" aria-pressed="false">
             <span class="logo-set single"><img src="assets/santander-consumer-new.gif" alt="Santander Consumer"></span>
-            <span>5 opciones activas</span>
+            <span>4 opciones activas</span>
           </button>
           <button class="bank-button" type="button" data-bank="tanner" aria-pressed="false">
             <span class="logo-set single"><img src="assets/tanner.jpg" alt="Tanner Crédito Automotriz"></span>
@@ -676,7 +676,7 @@
           {
             type: "Crédito automotriz",
             promotion: "Tasa 0,99%",
-            validity: "1 jun 2026 - 30 sep 2026",
+            validity: "1 jun 2026 - 31 oct 2026",
             notes: "Wall Connector se puede sumar al monto del crédito.",
             how: "Con ejecutivo/a Santander, en piso.",
             simulation: { rate: 0.99, months: 36, balloon: 30 }
@@ -684,18 +684,10 @@
           {
             type: "Crédito automotriz",
             promotion: "Tasa 0,89% mensual",
-            validity: "1 jun 2026 - 30 sep 2026",
+            validity: "1 jun 2026 - 31 oct 2026",
             notes: "Solo contratando seguro.",
             how: "Con ejecutivo/a Santander, en piso.",
             simulation: { rate: 0.89, months: 36, balloon: 30 }
-          },
-          {
-            type: "Crédito automotriz",
-            promotion: "Banco Santander 25 a 48 cuotas con tasa del 0,99 % mensual",
-            validity: "1 oct 2026 - 31 oct 2026",
-            notes: "",
-            how: "",
-            simulation: { rate: 0.99, months: 48, balloon: 30 }
           }
         ]
       },
@@ -917,7 +909,7 @@
               <label class="sim-field">
                 <span class="label">Cuotón final</span>
                 <span class="input-with-suffix">
-                  <input class="sim-input" type="number" min="0" max="90" step="1" data-field="balloon" value="${sim.balloon}">
+                  <input class="sim-input" type="number" min="0" max="90" step="1" data-field="balloon" value="0">
                   <span class="input-suffix">%</span>
                 </span>
               </label>
